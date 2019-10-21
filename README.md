@@ -4,7 +4,7 @@
 
 ### Group Member
 
-- Zhao,Ruixuan
-- Yong,RunFeng
-- Li,Jiahan
+- Zhao, Ruixuan
+- Yong, RunFeng
+- Li, Jiahan
 - Li, ZHao (zli872@wisc.edu)
