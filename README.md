@@ -6,5 +6,5 @@
 
 - Zhao, Ruixuan (rzhao67@wisc.edu)
 - Yong, RunFeng (ryong2@wisc.edu)
-- Li, Jiahan
+- Li, Jiahan (jli936@wisc.edu)
 - Li, ZHao (zli872@wisc.edu)
