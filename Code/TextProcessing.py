@@ -26,7 +26,7 @@ df_review.head()
 def text_processing(text):
     
     text = text.lower()
-    text = re.sub(r'[^a-zA-z0-9]', ' ', text)
+    text = re.sub(r'[^a-z0-9]', ' ', text)
     text = word_tokenize(text)
     text = [w for w in text if w not in stopwords.words('english')]
     text = [WordNetLemmatizer().lemmatize(w, pos = 'v') for w in text]
