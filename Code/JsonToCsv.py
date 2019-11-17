@@ -161,18 +161,43 @@ df_cate_count.to_csv('Data\\csv\\category_count.csv', index=False)
 
 # mexican info
 
+mexican_id = []
+df_business = pd.read_csv('Data\\csv\\business.csv')
+del df_business['Unnamed: 0']
 df_mexican = pd.DataFrame(columns = ['business_id', 'name', 'city', 
                                     'latitude', 'longitude', 'star',
-                                    'review_count'])
+                                    'review_count', 'attribute'])
 for i in range(df_business.shape[0]):
     cate_line = df_business.iloc[i,11]
     if isinstance(cate_line, str):
         cate_line = cate_line.replace(', ', ',')
         cate_line = cate_line.split(',')
         if 'Mexican' in cate_line:
-            insert_row = df_business.iloc[i, [0, 1, 3, 5, 6, 7, 8]]
+            insert_row = df_business.iloc[i, [0, 1, 3, 5, 6, 7, 8, 10]]
             df_mexican.loc[df_mexican.shape[0]] = insert_row.to_list()
-            mexican_id.append(df_business.iloc[i, 0])
+            mexican_id.append(df_business.iloc[i, 0])            
+
+df_mexican.to_csv('Data\\csv\\mexican_info.csv', index = False)
+
+
+df_mexican = pd.read_csv('Data\\csv\\mexican_info.csv')
+for i in range(df_mexican.shape[0]):
+    attr_str = df_mexican.iloc[i, 7]
+    attrs = []
+    print(i)
+    if isinstance(attr_str, str):
+        if attr_str == 'None':
+            df_mexican.iloc[i, 7] = ''
+        else:
+            attr_dict = eval(attr_str)
+            keys = list(attr_dict.keys())
+            for key in keys:
+                if attr_dict[key] == 'True':
+                    attrs.append(key)
+            df_mexican.iloc[i, 7] = ','.join(attrs)
+    else:
+        df_mexican.iloc[i, 7] = ''
+
 
 df_mexican.to_csv('Data\\csv\\mexican_info.csv', index = False)
 del df_mexican
