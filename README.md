@@ -26,4 +26,12 @@ The PPT folder contains slides for two parts of presentations.
 
 The image folder contains all image we get from data analysis.
 
+### Result
+
+The result folder contains all outputs in our project such as recommendations for each Mexican restaurants.
+
+### Shiny APP
+
+Here is our Shiny APP link:
+
 
