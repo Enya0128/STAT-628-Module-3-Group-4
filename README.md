@@ -42,6 +42,6 @@ The result folder contains all outputs in our project such as recommendations fo
 
 ### Shiny APP
 
-Here is our Shiny APP link:
+Here is our Shiny APP link:https://jiahanli.shinyapps.io/yelp_reviews/
 
 
