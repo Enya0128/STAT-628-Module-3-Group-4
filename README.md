@@ -12,3 +12,18 @@
 ### Data
 
 The data folder contains a link to the extracted data we use in this project.
+
+### Code
+
+The code folder contains all code to analyze data (Text processing, EDA, Model and test) and construct shiny APP.
+
+
+### PPT
+
+The PPT folder contains slides for two parts of presentations.
+
+### Image
+
+The image folder contains all image we get from data analysis.
+
+
